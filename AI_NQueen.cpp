@@ -399,7 +399,7 @@ void hillClimbing(vector<int> &position, vector<vector<char>> &board)
 void hillClimbingWithRandomRestart(vector<int> &position, vector<vector<char>> &board)
 {
 	int fincount = -1;
-	int limit = 10;
+	int limit = 100;
 	vector<int> finpos(n);
 	vector<vector<char>> finboard(n);
 	//finding the board with the least no. of queens been attacked
