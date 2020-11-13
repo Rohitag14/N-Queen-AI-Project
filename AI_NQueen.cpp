@@ -399,7 +399,7 @@ void hillClimbing(vector<int> &position, vector<vector<char>> &board)
 void hillClimbingWithRandomRestart(vector<int> &position, vector<vector<char>> &board)
 {
 	int fincount = -1;
-	int limit = 20;
+	int limit = 10;
 	vector<int> finpos(n);
 	vector<vector<char>> finboard(n);
 	//finding the board with the least no. of queens been attacked
@@ -521,16 +521,16 @@ int main()
 	cout << " sec" << endl;
 	cout << "Threats in this board are:" << calculateObjective(board, position)  << endl;
 	cout << endl;
-	//
+
 	initialttemp = 1000;
 	ttemp = initialttemp;
-	simAnnealing(n);
+
 
 	struct timeval start2, end2;
 
 	// start timer.
 	gettimeofday(&start2, NULL);
-	hillClimbingWithRandomRestart(position, board);
+	simAnnealing(n);
 	gettimeofday(&end2, NULL);
 
 	// Calculating total time taken by the program.
